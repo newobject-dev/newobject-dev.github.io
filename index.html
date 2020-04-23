@@ -27,24 +27,53 @@
 
     a {
       position: fixed;
-      top: 20px;
-      right: 20px;
+      top: 25px;
+      right: 25px;
     }
 
     a svg path {
       opacity: 0.3;
-      transition: opacity 0.5s;
+      -webkit-transition: opacity 0.5s linear;
+      -moz-transition: opacity 0.5s linear;
+      transition: opacity 0.5s linear;
+
     }
 
     a:hover svg path {
       opacity: 1;
     }
+    #logo {
+      height: auto;
+      -webkit-transition: width 0.5s linear;
+      -moz-transition: width 0.5s linear;
+      transition: width 0.5s linear;
+    }
 
+    @media all and (max-width: 499px) {
+      #logo {
+        width: 200px;
+      }
+    }
+    @media all and (min-width: 500px) and (max-width: 899px) {
+      #logo {
+        width: 350px;
+      }
+    }
+    @media all and (min-width: 900px) and (max-width: 1399px) {
+      #logo {
+        width: 400px;
+      }
+    }
+    @media all and (min-width: 1400px) {
+      #logo {
+        width: 500px;
+      }
+    }
   </style>
 </head>
 <body>
   <div>
-    <svg width="510" height="493">
+    <svg id="logo" viewBox="0 0 510 493">
       <path d="m162.851,22.9896c185.592,-80.3362 330.904,59.5157 342.12,148.6884c1.422,11.302 4.139,32.088 4.076,45.855c-0.32,91.722 -35.093,154.09 -44.09,170.736c-21.808,40.347 -54.089,68.995 -95.444,83.071c-138.555,47.161 -306.5145,21.696 -353.611,-161.764c-22.15328,-86.297 -47.2277,-202.533 146.949,-286.5864z" clip-rule="evenodd" fill-rule="evenodd"/>
     </svg>
     <a href="https://github.com/newobject-dev">
